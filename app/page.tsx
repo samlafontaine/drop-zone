@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { rozha_one } from "./fonts";
+import Countdown from "./hooks/countdown";
 
 export default function Home() {
   return (
@@ -7,71 +8,29 @@ export default function Home() {
       <div className="w-full">
         <div className="z-10 absolute flex flex-col gap-3 items-end w-full mt-10 text-4xl">
           <div
-            className={`${rozha_one.className} px-7 py-2 bg-black uppercase mr-12 tracking-widest`}
+            className={`${rozha_one.className} px-5 py-1 bg-black uppercase mr-12 tracking-widest text-white tracking-[0.2em]`}
           >
             drop
           </div>
           <div
-            className={`${rozha_one.className} px-7 py-2 bg-black uppercase mr-10 tracking-widest`}
+            className={`${rozha_one.className} px-5 py-1 bg-black uppercase mr-10 tracking-widest text-white tracking-[0.2em]`}
           >
             zone
           </div>
         </div>
-        <div className="z-10 absolute flex flex-col gap-3 items-end text-4xl h-screen w-screen place-content-center">
-          <div className="flex flex-col items-center gap-5 mr-36">
-            <div className="uppercase text-black text-5xl font-black tracking-widest">
-              leezy boost 103
-            </div>
-            <div className="flex flex-row gap-6">
-              <div className="flex flex-col gap-2 items-center">
-                <div className="flex flex-row gap-3">
-                  <div className="p-5 bg-black">1</div>
-                  <div className="p-5 bg-black">3</div>
-                </div>
-                <div className="uppercase text-black text-2xl font-black">
-                  days
-                </div>
-              </div>
-              <div className="flex flex-col gap-2 items-center">
-                <div className="flex flex-row gap-3">
-                  <div className="p-5 bg-black">1</div>
-                  <div className="p-5 bg-black">3</div>
-                </div>
-                <div className="uppercase text-black text-2xl font-black">
-                  hours
-                </div>
-              </div>
-              <div className="flex flex-col gap-2 items-center">
-                <div className="flex flex-row gap-3">
-                  <div className="p-5 bg-black">1</div>
-                  <div className="p-5 bg-black">3</div>
-                </div>
-                <div className="uppercase text-black text-2xl font-black">
-                  mins
-                </div>
-              </div>
-              <div className="flex flex-col gap-2 items-center">
-                <div className="flex flex-row gap-3">
-                  <div className="p-5 bg-black">1</div>
-                  <div className="p-5 bg-black">3</div>
-                </div>
-                <div className="uppercase text-black text-2xl font-black">
-                  secs
-                </div>
-              </div>
-            </div>
-            <div className="text-sm text-black uppercase text-lg font-normal">
-              until drop
-            </div>
-          </div>
+        <div className="z-10 absolute flex flex-col gap-3 text-4xl h-screen w-screen justify-end md:items-end md:place-content-center">
+          {" "}
+          <Countdown />
         </div>
-        <Image
+        <div className="h-screen bg-[url('https://github.com/diffagency/drop-zone/blob/master/images/landing.jpg?raw=true')] relative z-0"></div>
+        {/*<Image
           src="/landing-image.jpg"
           layout="fill"
           objectFit="fill"
           alt="Drop Zone"
           className="relative z-0"
         />
+  */}
       </div>
     </main>
   );
