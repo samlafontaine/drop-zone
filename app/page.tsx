@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { rozha_one } from "./fonts";
 import Countdown from "./hooks/countdown";
 

@@ -2,14 +2,13 @@
 
 import React, { useState, useEffect } from "react";
 import CountdownDigit from "../countdown-digit";
-import { rozha_one } from "../fonts";
 
 const targetDate =
   new Date().getTime() +
   13 * 24 * 60 * 60 * 1000 +
   8 * 60 * 60 * 1000 +
   12 * 60 * 1000 +
-  5 * 1000;
+  5 * 1100;
 
 const Countdown = () => {
   const calculateTimeRemaining = () => {
